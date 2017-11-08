@@ -17,12 +17,13 @@
     </style>
 
     <!-- SPELLS -->
-    <script src="http://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://rawgithub.com/misoproject/d3.chart/master/d3.chart.min.js"></script>
     <script src="https://rawgithub.com/samselikoff/d3.chart.barchart/master/d3.chart.barchart.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js"></script>
+    <script src="js/customBarChart.js"></script>
     <script src="js/main.js"></script>
 
 </head>
@@ -30,10 +31,11 @@
 <body ng-app="socketApp">
 <div ng-controller="myController">
     <h1 class="text-center">{{time}}</h1>
-</div>
-<div id="chart"></div>
 
-
+        <chart-form></chart-form>
+        <bar-chart height="options.height" data="data" hovered="hovered(args)"></bar-chart>
+        <!--<bar-chart height="300" data="data" hovered="hovered(args)></bar-chart>-->
+    </div>
 </div>
 <script>
 
